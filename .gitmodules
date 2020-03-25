@@ -1,3 +1,6 @@
 [submodule "paper-color"]
 	path = paper-color
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule "pathogen"]
+	path = pathogen
+	url = https://github.com/tpope/vim-pathogen
