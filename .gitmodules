@@ -1,0 +1,3 @@
+[submodule "paper-color"]
+	path = paper-color
+	url = https://github.com/NLKNguyen/papercolor-theme
