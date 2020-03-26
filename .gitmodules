@@ -4,3 +4,12 @@
 [submodule "pathogen"]
 	path = pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "ctrlp.vim"]
+	path = ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "vim-tex-fold"]
+	path = vim-tex-fold
+	url = https://github.com/matze/vim-tex-fold
+[submodule "goyo.vim"]
+	path = goyo.vim
+	url = https://github.com/junegunn/goyo.vim
