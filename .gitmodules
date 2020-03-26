@@ -13,3 +13,9 @@
 [submodule "goyo.vim"]
 	path = goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+[submodule "seoul256.vim"]
+	path = seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim
+[submodule "gruvbox"]
+	path = gruvbox
+	url = https://github.com/morhetz/gruvbox
