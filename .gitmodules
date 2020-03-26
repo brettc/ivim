@@ -34,3 +34,18 @@
 [submodule "vim-sneak"]
 	path = vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+[submodule "vim-pencil"]
+	path = vim-pencil
+	url = https://github.com/reedes/vim-pencil
+[submodule "vim-colors-pencil"]
+	path = vim-colors-pencil
+	url = https://github.com/reedes/vim-colors-pencil
+[submodule "vim-textobj-sentence"]
+	path = vim-textobj-sentence
+	url = https://github.com/reedes/vim-textobj-sentence
+[submodule "vim-textobj-quote"]
+	path = vim-textobj-quote
+	url = https://github.com/reedes/vim-textobj-quote
+[submodule "vim-lexical"]
+	path = vim-lexical
+	url = https://github.com/reedes/vim-lexical
