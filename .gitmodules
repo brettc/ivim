@@ -4,3 +4,6 @@
 [submodule "pathogen"]
 	path = pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "vim-tex-fold"]
+	path = vim-tex-fold
+	url = https://github.com/matze/vim-tex-fold
