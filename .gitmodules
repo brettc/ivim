@@ -25,3 +25,12 @@
 [submodule "vim-commentary"]
 	path = vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "vim-dirvish"]
+	path = vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish
+[submodule "vim-peekaboo"]
+	path = vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo
+[submodule "vim-sneak"]
+	path = vim-sneak
+	url = https://github.com/justinmk/vim-sneak
