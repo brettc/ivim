@@ -22,3 +22,6 @@
 [submodule "vim-wordy"]
 	path = vim-wordy
 	url = https://github.com/reedes/vim-wordy
+[submodule "vim-commentary"]
+	path = vim-commentary
+	url = https://github.com/tpope/vim-commentary
