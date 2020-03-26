@@ -9,7 +9,7 @@ syntax on
 filetype plugin indent on
 
 " Display
-"colorscheme wombat
+colorscheme PaperColor
 ifont 5 18
 
 let mapleader=","
@@ -21,3 +21,4 @@ nmap k gk
 set linebreak
 
 "map <leader>b :CtrlPBuffer<cr>
+map <c-s> :w<cr>
