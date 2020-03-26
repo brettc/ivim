@@ -19,3 +19,6 @@
 [submodule "gruvbox"]
 	path = gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "vim-wordy"]
+	path = vim-wordy
+	url = https://github.com/reedes/vim-wordy
