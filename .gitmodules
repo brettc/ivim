@@ -52,3 +52,6 @@
 [submodule "vim-correction"]
 	path = vim-correction
 	url = https://github.com/jdelkins/vim-correction
+[submodule "tex-conceal.vim"]
+	path = tex-conceal.vim
+	url = https://github.com/KeitaNakamura/tex-conceal.vim
