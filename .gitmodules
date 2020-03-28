@@ -43,3 +43,6 @@
 [submodule "awesome-vim-colorschemes"]
 	path = awesome-vim-colorschemes
 	url = https://github.com/rafi/awesome-vim-colorschemes
+[submodule "vimtex"]
+	path = vimtex
+	url = https://github.com/lervag/vimtex
