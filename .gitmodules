@@ -1,6 +1,3 @@
-[submodule "paper-color"]
-	path = paper-color
-	url = https://github.com/NLKNguyen/papercolor-theme
 [submodule "pathogen"]
 	path = pathogen
 	url = https://github.com/tpope/vim-pathogen
@@ -13,12 +10,6 @@
 [submodule "goyo.vim"]
 	path = goyo.vim
 	url = https://github.com/junegunn/goyo.vim
-[submodule "seoul256.vim"]
-	path = seoul256.vim
-	url = https://github.com/junegunn/seoul256.vim
-[submodule "gruvbox"]
-	path = gruvbox
-	url = https://github.com/morhetz/gruvbox
 [submodule "vim-wordy"]
 	path = vim-wordy
 	url = https://github.com/reedes/vim-wordy
@@ -37,9 +28,6 @@
 [submodule "vim-pencil"]
 	path = vim-pencil
 	url = https://github.com/reedes/vim-pencil
-[submodule "vim-colors-pencil"]
-	path = vim-colors-pencil
-	url = https://github.com/reedes/vim-colors-pencil
 [submodule "vim-textobj-sentence"]
 	path = vim-textobj-sentence
 	url = https://github.com/reedes/vim-textobj-sentence
@@ -52,3 +40,6 @@
 [submodule "vim-textobj-user"]
 	path = vim-textobj-user
 	url = https://github.com/kana/vim-textobj-user
+[submodule "awesome-vim-colorschemes"]
+	path = awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes
