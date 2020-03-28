@@ -46,3 +46,9 @@
 [submodule "vimtex"]
 	path = vimtex
 	url = https://github.com/lervag/vimtex
+[submodule "vim-abolish"]
+	path = vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "vim-correction"]
+	path = vim-correction
+	url = https://github.com/jdelkins/vim-correction
