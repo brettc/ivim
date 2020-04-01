@@ -55,3 +55,6 @@
 [submodule "tex-conceal.vim"]
 	path = tex-conceal.vim
 	url = https://github.com/KeitaNakamura/tex-conceal.vim
+[submodule "vim-bookmarks"]
+	path = vim-bookmarks
+	url = https://github.com/MattesGroeger/vim-bookmarks
