@@ -4,9 +4,6 @@
 [submodule "ctrlp.vim"]
 	path = ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "vim-tex-fold"]
-	path = vim-tex-fold
-	url = https://github.com/matze/vim-tex-fold
 [submodule "goyo.vim"]
 	path = goyo.vim
 	url = https://github.com/junegunn/goyo.vim
@@ -58,3 +55,9 @@
 [submodule "vim-bookmarks"]
 	path = vim-bookmarks
 	url = https://github.com/MattesGroeger/vim-bookmarks
+[submodule "FastFold"]
+	path = FastFold
+	url = https://github.com/Konfekt/FastFold
+[submodule "vim-stay"]
+	path = vim-stay
+	url = https://github.com/zhimsel/vim-stay
