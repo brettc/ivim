@@ -2,7 +2,9 @@
 
 > VIM and iOS, finally together, with Git and Plugins.
 
-![Snapshot](./images/example.png)
+<p align="center">
+  <img src="./images/example.png” width="100" title="Github Logo">
+</p>
 
 There are numerous nice editors on the iPad (such as [Textastic][textastic]), but I missed using the muscle memory from years of working with [Vi(m)][vim]. [iVim][ivim] is an excellent port of Vim to iOS. With the new support for [mapping hardware keyboards in iOS 3.4][capslock], it’s like typing on a real computer.
 
