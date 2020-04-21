@@ -2,8 +2,6 @@
 
 > VIM and iOS, finally together, with Git and Plugins.
 
-![Bla](./images/example.png)
-
 There are numerous nice editors on the iPad, such as [Textastic][textastic]. But if you’ve spent years establishing the muscle memory with [Vi(m)][vim], switching to a non-vim-like editor is hard. I recently came across [iVim][ivim], an excellent port of Vim to iOS. With new support for [mapping hardware keyboards in iOS 3.4][capslock], you can even have an escape key, or map caps-lock to something useful.
 
 I’ve taken keeping my `.vimrc` file relatively bare in recent years, offloading the complexity to plugins instead. Replicating the use of Plugins on the iPad turns out to a little painful. I found some useful [guides online][faff], but I wanted an approach that (a) had minimal faffing amount, and (b) was versioned.
@@ -25,18 +23,23 @@ Here’s where another fabulous iPad app steps in: [Working Copy][workingcopy], 
 
 The set of plugins in this repo are what I’m currently playing with on the iPad. They’re mostly for writing in markdown or LaTeX, some additional buffer/file handling, and a great set of colour schemes. Many modern plugins rely on other system tools that aren’t available on the iPad. So I’ve chosen plugins that require only vim-script (VimTeX is an exception; but I only use some parts of it). There are plenty of other plugins you can install, but be not all of them will work on the iPad.
 
-Although Working Copy supports submodules cloning, I have not found an easy way of adding and removing submodules on the iPad. So I do this my Mac. Clone the repo locally, then add or remove plugins using the git submodule commands. Adding submodules is easy, removing them requires a bit of faffing about.
+Although Working Copy supports submodules cloning, I have not found an easy way of adding and removing submodules on the iPad, so I do this my Mac.
+
+Clone the repo locally, then add or remove plugins using the git submodule commands. Adding submodules is easy, removing them requires a bit of faffing about.
 
 ```sh
-[~/code/ivim]$ git submodule add plugins
-
+[~/code/ivim]$ git submodule add url
 ```
 
 ```sh
-git submodule deinit
-git rm
-
+[~/code/ivim]$ git submodule deinit xxx
+[~/code/ivim]$ rm -rf xxx
 ```
+
+
+## Enjoy!
+
+Raise an issue if you have questions.
 
 
 [faff]: https://www.reddit.com/r/vim/comments/9ki5g8/ivim_ios_howtos/
