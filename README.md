@@ -27,15 +27,24 @@ Although Working Copy supports submodules cloning, I have not found an easy way 
 
 Clone the repo locally, then add or remove plugins using the git submodule commands. Adding submodules is easy, removing them requires a bit of faffing about.
 
+Adding a new plugin:
 ```sh
-[~/code/ivim]$ git submodule add url
+[~/code/ivim]$ git submodule add https://github.com/frazrepo/vim-rainbow
 ```
 
+Removing a plugin ([details here][rmmod]):
 ```sh
-[~/code/ivim]$ git submodule deinit xxx
-[~/code/ivim]$ rm -rf xxx
+[~/code/ivim]$ git submodule deinit vim-rainbow
+[~/code/ivim]$ rm -rf .git/modules/vim-rainbow
+[~/code/ivim]$ git rm -f vim-rainbow
 ```
 
+Updating your plugins:
+```sh
+[~/code/ivim]$ git submodule update --rebase --remote
+```
+
+Push any changes, then use Working Copy to update everything on your iPad.
 
 ## Enjoy!
 
@@ -50,4 +59,5 @@ Raise an issue if you have questions.
 [workingcopy]: https://workingcopyapp.com
 [texpad]: https://www.texpad.com
 [pathogen]: https://github.com/tpope/vim-pathogen
+[rmmod]: https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/1260982#1260982
 
