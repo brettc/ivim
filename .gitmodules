@@ -61,3 +61,6 @@
 [submodule "vim-stay"]
 	path = vim-stay
 	url = https://github.com/zhimsel/vim-stay
+[submodule "ctrlp_bdelete.vim"]
+	path = ctrlp_bdelete.vim
+	url = https://github.com/d11wtq/ctrlp_bdelete.vim
