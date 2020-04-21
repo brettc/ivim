@@ -1,4 +1,0 @@
-" Just source the one that is under git control.
-source ~/ivim/vimrc
-
-" DON'T add anything here! Change the file referenced above.
