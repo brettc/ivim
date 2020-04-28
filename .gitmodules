@@ -64,3 +64,6 @@
 [submodule "ctrlp_bdelete.vim"]
 	path = ctrlp_bdelete.vim
 	url = https://github.com/d11wtq/ctrlp_bdelete.vim
+[submodule "vim-rooter"]
+	path = vim-rooter
+	url = https://github.com/airblade/vim-rooter
