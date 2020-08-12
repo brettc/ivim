@@ -1,11 +1,32 @@
 set nocompatible
 
-" Load up pathogen, using an alternative folder.
-source ~/ivim/pathogen/autoload/pathogen.vim
-execute pathogen#infect('~/ivim/{}')
-
 syntax on
 filetype plugin indent on
+
+" Plugins
+iplug add https://github.com/tpope/vim-pathogen
+iplug add https://github.com/ctrlpvim/ctrlp.vim
+iplug add https://github.com/junegunn/goyo.vim
+iplug add https://github.com/reedes/vim-wordy
+iplug add https://github.com/tpope/vim-commentary
+iplug add https://github.com/justinmk/vim-dirvish
+iplug add https://github.com/junegunn/vim-peekaboo
+iplug add https://github.com/justinmk/vim-sneak
+iplug add https://github.com/reedes/vim-pencil
+iplug add https://github.com/reedes/vim-textobj-sentence
+iplug add https://github.com/reedes/vim-textobj-quote
+iplug add https://github.com/reedes/vim-lexical
+iplug add https://github.com/kana/vim-textobj-user
+iplug add https://github.com/rafi/awesome-vim-colorschemes
+iplug add https://github.com/lervag/vimtex
+iplug add https://github.com/tpope/vim-abolish
+iplug add https://github.com/jdelkins/vim-correction
+iplug add https://github.com/KeitaNakamura/tex-conceal.vim
+iplug add https://github.com/MattesGroeger/vim-bookmarks
+iplug add https://github.com/Konfekt/FastFold
+iplug add https://github.com/zhimsel/vim-stay
+iplug add https://github.com/d11wtq/ctrlp_bdelete.vim
+iplug add https://github.com/airblade/vim-rooter
 
 " Some basic options
 set completeopt=noinsert,menuone,noselect
