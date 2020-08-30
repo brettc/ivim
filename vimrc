@@ -4,29 +4,32 @@ syntax on
 filetype plugin indent on
 
 " Plugins
-iplug add https://github.com/tpope/vim-pathogen
-iplug add https://github.com/ctrlpvim/ctrlp.vim
-iplug add https://github.com/junegunn/goyo.vim
-iplug add https://github.com/reedes/vim-wordy
-iplug add https://github.com/tpope/vim-commentary
-iplug add https://github.com/justinmk/vim-dirvish
-iplug add https://github.com/junegunn/vim-peekaboo
-iplug add https://github.com/justinmk/vim-sneak
-iplug add https://github.com/reedes/vim-pencil
-iplug add https://github.com/reedes/vim-textobj-sentence
-iplug add https://github.com/reedes/vim-textobj-quote
-iplug add https://github.com/reedes/vim-lexical
-iplug add https://github.com/kana/vim-textobj-user
-iplug add https://github.com/rafi/awesome-vim-colorschemes
-iplug add https://github.com/lervag/vimtex
-iplug add https://github.com/tpope/vim-abolish
-iplug add https://github.com/jdelkins/vim-correction
-iplug add https://github.com/KeitaNakamura/tex-conceal.vim
-iplug add https://github.com/MattesGroeger/vim-bookmarks
-iplug add https://github.com/Konfekt/FastFold
-iplug add https://github.com/zhimsel/vim-stay
-iplug add https://github.com/d11wtq/ctrlp_bdelete.vim
-iplug add https://github.com/airblade/vim-rooter
+" iplug add 
+" 			\ https://github.com/ctrlpvim/ctrlp.vim 
+" 			\ https://github.com/junegunn/goyo.vim
+" 			\ https://github.com/reedes/vim-wordy
+" 			\ https://github.com/tpope/vim-commentary
+" 			\ https://github.com/justinmk/vim-dirvish
+" 			\ https://github.com/junegunn/vim-peekaboo
+" 			\ https://github.com/justinmk/vim-sneak
+" 			\ https://github.com/reedes/vim-pencil
+" 			\ https://github.com/reedes/vim-textobj-sentence
+" 			\ https://github.com/reedes/vim-textobj-quote
+" 			\ https://github.com/reedes/vim-lexical
+" 			\ https://github.com/kana/vim-textobj-user
+" 			\ https://github.com/rafi/awesome-vim-colorschemes
+" 			\ https://github.com/lervag/vimtex
+" 			\ https://github.com/tpope/vim-abolish
+" 			\ https://github.com/jdelkins/vim-correction
+" 			\ https://github.com/KeitaNakamura/tex-conceal.vim
+" 			\ https://github.com/MattesGroeger/vim-bookmarks
+" 			\ https://github.com/Konfekt/FastFold
+" 			\ https://github.com/zhimsel/vim-stay
+" 			\ https://github.com/d11wtq/ctrlp_bdelete.vim
+" 			\ https://github.com/airblade/vim-rooter
+"			\ https://github.com/dhruvasagar/vim-table-mode 
+"			\ https://github.com/godlygeek/tabular
+
 
 " Some basic options
 set completeopt=noinsert,menuone,noselect
@@ -70,8 +73,10 @@ set undofile
 " colorscheme seoul
 " colorscheme abstract
 " colorscheme afterglow
+" colorscheme scheakur
+colorscheme space-vim-dark
 set background=dark
-colorscheme scheakur
+
 ifont iosevka-fixed-ss04-extended 18
 
 let mapleader=","
@@ -83,10 +88,10 @@ set conceallevel=2
 
 let g:vimtex_toc_config = { 'show_help' : 0, 'refresh_always' : 1, 'todo_sorted' : 0 }
 
-augroup vimtex
-  autocmd!
-  autocmd BufWritePost *.tex call vimtex#toc#refresh()
-augroup END
+" augroup vimtex
+"   autocmd!
+"   autocmd BufWritePost *.tex call vimtex#toc#refresh()
+" augroup END
 
 function! SynGroup()
     let l:s = synID(line('.'), col('.'), 1)
@@ -117,7 +122,7 @@ function! Prose()
   " iabbrev <buffer> >> »
 
   " open most folds
-  " setlocal foldlevel=6
+  setlocal foldlevel=6
 
   " replace typographical quotes (reedes/vim-textobj-quote)
   map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
@@ -136,7 +141,8 @@ endfunction "
 " automatically initialize buffer by file type
 autocmd FileType markdown,mkd call Prose()
 
-autocmd FileType tex hi link texItalStyle Underlined
+autocmd FileType tex hi link texItalStyle Special
+autocmd FileType tex hi Conceal guibg=NONE
 autocmd FileType tex call Prose()
 autocmd FileType tex set conceallevel=2 concealcursor=
 
