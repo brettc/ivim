@@ -3,32 +3,33 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-" Plugins
-" iplug add 
-" 			\ https://github.com/ctrlpvim/ctrlp.vim 
-" 			\ https://github.com/junegunn/goyo.vim
-" 			\ https://github.com/reedes/vim-wordy
-" 			\ https://github.com/tpope/vim-commentary
-" 			\ https://github.com/justinmk/vim-dirvish
-" 			\ https://github.com/junegunn/vim-peekaboo
-" 			\ https://github.com/justinmk/vim-sneak
-" 			\ https://github.com/reedes/vim-pencil
-" 			\ https://github.com/reedes/vim-textobj-sentence
-" 			\ https://github.com/reedes/vim-textobj-quote
-" 			\ https://github.com/reedes/vim-lexical
-" 			\ https://github.com/kana/vim-textobj-user
-" 			\ https://github.com/rafi/awesome-vim-colorschemes
-" 			\ https://github.com/lervag/vimtex
-" 			\ https://github.com/tpope/vim-abolish
-" 			\ https://github.com/jdelkins/vim-correction
-" 			\ https://github.com/KeitaNakamura/tex-conceal.vim
-" 			\ https://github.com/MattesGroeger/vim-bookmarks
-" 			\ https://github.com/Konfekt/FastFold
-" 			\ https://github.com/zhimsel/vim-stay
-" 			\ https://github.com/d11wtq/ctrlp_bdelete.vim
-" 			\ https://github.com/airblade/vim-rooter
-"			\ https://github.com/dhruvasagar/vim-table-mode 
-"			\ https://github.com/godlygeek/tabular
+function! InitPlugins()
+    " iplug add remove vim-table*
+    iplug add -q 
+                \ https://github.com/ctrlpvim/ctrlp.vim 
+                \ https://github.com/junegunn/goyo.vim
+                \ https://github.com/reedes/vim-wordy
+                \ https://github.com/tpope/vim-commentary
+                \ https://github.com/junegunn/vim-peekaboo
+                \ https://github.com/justinmk/vim-sneak
+                \ https://github.com/reedes/vim-pencil
+                \ https://github.com/reedes/vim-textobj-sentence
+                \ https://github.com/reedes/vim-textobj-quote
+                \ https://github.com/reedes/vim-lexical
+                \ https://github.com/kana/vim-textobj-user
+                \ https://github.com/rafi/awesome-vim-colorschemes
+                \ https://github.com/lervag/vimtex
+                \ https://github.com/tpope/vim-abolish
+                \ https://github.com/jdelkins/vim-correction
+                \ https://github.com/KeitaNakamura/tex-conceal.vim
+                \ https://github.com/MattesGroeger/vim-bookmarks
+                \ https://github.com/Konfekt/FastFold
+                \ https://github.com/zhimsel/vim-stay
+                \ https://github.com/d11wtq/ctrlp_bdelete.vim
+                \ https://github.com/airblade/vim-rooter
+                \ https://github.com/dhruvasagar/vim-table-mode 
+                \ https://github.com/godlygeek/tabular
+endfun
 
 
 " Some basic options
@@ -43,8 +44,11 @@ set nostartofline
 set fileencoding=utf-8
 set nowrap
 set linebreak
-set listchars=tab:\ \ ,trail:·
+
+" Show chars
+set listchars=tab:↦·,trail:·
 set list
+
 set lazyredraw
 set background=dark
 set hidden
@@ -54,6 +58,10 @@ set splitbelow
 set path+=**
 set fillchars+=vert:\│
 set synmaxcol=5000
+set expandtab
+
+" Show full list and best match, then full
+set wildmode=list:longest,full
 
 " set exrc
 " set secure
@@ -74,10 +82,9 @@ set undofile
 " colorscheme abstract
 " colorscheme afterglow
 " colorscheme scheakur
-colorscheme space-vim-dark
+colorscheme one
 set background=dark
-
-ifont iosevka-fixed-ss04-extended 18
+ifont set Ios* --size 18
 
 let mapleader=","
 let maplocalleader=","
@@ -141,14 +148,18 @@ endfunction "
 " automatically initialize buffer by file type
 autocmd FileType markdown,mkd call Prose()
 
-autocmd FileType tex hi link texItalStyle Special
-autocmd FileType tex hi Conceal guibg=NONE
-autocmd FileType tex call Prose()
-autocmd FileType tex set conceallevel=2 concealcursor=
+augroup tex
+    autocmd!
+    au FileType tex hi texItalStyle gui=italic guifg=pink
+    " au FileType tex hi Conceal guibg=NONE gui=bold
+    au FileType tex hi link Conceal PreProc 
+    au FileType tex call Prose()
+    au FileType tex setlocal conceallevel=2 concealcursor=
+    au FileType tex setlocal foldmethod=expr
+    au FileType tex setlocal foldexpr=vimtex#fold#level(v:lnum)
+    au FileType tex setlocal foldtext=vimtex#fold#text()
+augroup END
 
-set foldmethod=expr
-set foldexpr=vimtex#fold#level(v:lnum)
-set foldtext=vimtex#fold#text()
 
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
@@ -184,5 +195,8 @@ nnoremap <c-1> :call SynGroup()<cr>
 " I'm so used to doing this...
 nmap <c-s> :w<cr>
 
+" Rooter plugin
+let g:rooter_cd_cmd = 'tcd'
 
-" vim: fdm=marker
+
+" vim: fdm=marker sw=4 ts=4
